@@ -1,0 +1,15 @@
+#ifndef __MAP_HRH__
+#define __MAP_HRH__
+
+#define _UID3 0xE1038E0F
+
+enum TMapIds
+	{
+	ECommand1 = 0x6001, // start value must not be 0
+	ECommand2,
+	EHelp,
+	EAbout,
+	ECidWaitNote
+	};
+
+#endif // __MAP_HRH__
