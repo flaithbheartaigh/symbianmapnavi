@@ -1,0 +1,56 @@
+
+TARGET			map.exe
+TARGETTYPE		exe
+UID		  0x100039CE 0xE1038E0F
+
+SOURCEPATH		..\src
+SOURCE			mapmain.cpp
+SOURCE			mapapplication.cpp
+SOURCE			mapappview.cpp
+SOURCE			mapappui.cpp
+SOURCE			mapdocument.cpp
+SOURCE          mapgpsengine.cpp 
+SOURCE          maphttpengine.cpp 
+SOURCE          mapimageengine.cpp
+SOURCE          mapactiveobject.cpp
+
+
+START RESOURCE	..\data\map.rss
+HEADER
+TARGET map.rsc
+TARGETPATH resource\apps
+END //RESOURCE
+
+START RESOURCE	..\data\map_reg.rss
+TARGET map_reg.rsc
+TARGETPATH 	  \private\10003a3f\apps
+END //RESOURCE
+
+
+
+USERINCLUDE	   ..\inc
+USERINCLUDE    ..\help
+
+SYSTEMINCLUDE	 \epoc32\include \epoc32\include\ecom
+
+LIBRARY		   euser.lib
+LIBRARY		   apparc.lib
+LIBRARY		   cone.lib
+LIBRARY		   eikcore.lib
+LIBRARY		   avkon.lib
+LIBRARY		   commonengine.lib
+LIBRARY		   efsrv.lib 
+LIBRARY		   estor.lib
+LIBRARY        aknnotify.lib
+LIBRARY        hlplch.lib lbs.lib http.lib bafl.lib esock.lib inetprotutil.lib commdb.lib ecom.lib centralrepository.lib apsettingshandlerui.lib apengine.lib fbscli.lib bitgdi.lib imageconversion.lib cntmodel.lib apgrfx.lib apmime.lib
+ 
+
+LANG SC
+
+VENDORID	  	  0
+SECUREID		  0xE1038E0F
+CAPABILITY	  	  Location NetworkServices ReadDeviceData ReadUserData WriteDeviceData WriteUserData
+
+
+// End of File
+
